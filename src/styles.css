@@ -10,7 +10,7 @@ body {
 
 html {
 	--accent: hsl(1, 59%, 50%);
-	--column: 80rem;
+	--column: 60rem;
 	--side: 1rem;
 	font-family:
 		system-ui,
@@ -33,4 +33,11 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
+}
+
+.column {
+	max-width: var(--column);
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 var(--side);
 }

@@ -1,15 +1,30 @@
 <script>
 	import '../styles.css';
+	import logo from '$lib/images/logo.svg';
+	import tmdb from '$lib/images/tmdb.svg';
 </script>
 
 <nav>
-	<a href="/">Svelteflix</a>
+	<a href="/"><img src={logo} alt="Svelteflix" /></a>
 	<div class="links">
 		<a href="/search">Search</a>
 		<a href="/watchlist">Watchlist</a>
 		<a href="/login">Log in</a>
 	</div>
 </nav>
+
+<main>
+	<slot />
+</main>
+
+<footer>
+	<p>
+		Data provided by
+		<a href="https://www.themoviedb.org">
+			<img src={tmdb} alt="The Movie DB" />
+		</a>
+	</p>
+</footer>
 
 <style>
 	nav {
@@ -26,5 +41,20 @@
 	a {
 		color: inherit;
 		text-decoration: none;
+	}
+
+	img {
+		height: 1rem;
+	}
+
+	.links {
+		display: flex;
+		gap: 1rem;
+	}
+
+	footer {
+		display: flex;
+		justify-content: center;
+		height: 5rem;
 	}
 </style>
