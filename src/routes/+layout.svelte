@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import '../styles.css';
 	import logo from '$lib/images/logo.svg';
 	import tmdb from '$lib/images/tmdb.svg';
@@ -13,7 +14,7 @@
 	</div>
 </nav>
 
-<main>
+<main class:infinite={$page.data.infinite}>
 	<slot />
 </main>
 
@@ -34,7 +35,6 @@
 		align-items: center;
 		justify-content: space-between;
 		max-width: var(--column);
-		padding: 0 var(--side);
 		color: var(--accent);
 	}
 
@@ -52,9 +52,18 @@
 		gap: 1rem;
 	}
 
+	main.infinite {
+		height: 0;
+		flex: 1;
+		overflow: hidden;
+	}
+
 	footer {
 		display: flex;
 		justify-content: center;
 		height: 5rem;
+	}
+	.logo {
+		height: 100%;
 	}
 </style>
