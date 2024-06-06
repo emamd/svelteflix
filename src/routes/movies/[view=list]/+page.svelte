@@ -7,7 +7,7 @@
 	let appending = false;
 </script>
 
-<div class="column">
+<div class="column flex">
 	<h1>{data.title}</h1>
 
 	<ResultsPage
@@ -30,11 +30,3 @@
 		}}
 	/>
 </div>
-
-<style>
-	.column {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-	}
-</style>

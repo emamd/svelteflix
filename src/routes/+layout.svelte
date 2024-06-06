@@ -28,6 +28,12 @@
 </footer>
 
 <style>
+	nav,
+	footer {
+		padding: 1rem var(--side);
+		margin: 0 auto;
+	}
+
 	nav {
 		display: flex;
 		width: 100%;

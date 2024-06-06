@@ -41,5 +41,13 @@ body {
 	max-width: var(--column);
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0 var(--side);
+	padding-left: var(--side);
+	padding-right: var(--side);
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	gap: 1rem;
 }
